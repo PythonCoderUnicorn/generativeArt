@@ -7,3 +7,13 @@ generative art using trigonometry functions
 
 ## green explosion
 ![explosion](./img/greenexplosion.png)
+
+## gold glitter
+![glitter](./img/goldglitter.png)
+
+
+
+
+
+
+
