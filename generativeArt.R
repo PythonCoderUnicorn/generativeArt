@@ -129,11 +129,15 @@ df %>%
 
 sin(df2$x)
 
+# gold glitter : x = sin(x)
+# gold glitter : y = sin(y)
+
 df %>% 
   ggplot(
-    aes(x= sin(x),
-        y = y*z,
-        col= z*x)
+    aes(x= x,
+        y = y,
+        col= z
+          )
   ) +
   geom_jitter(show.legend = F)+
   scale_color_paletteer_c("gameofthrones::baratheon")+
@@ -147,5 +151,41 @@ df %>%
 
 
 
+
+# ----------------------------
+# cos(x)
+# sin(x)
+# tan(x)
+# acos(x)
+# asin(x)
+# atan(x)
+# atan2(y, x)
+
+
+
+# cosine
+# x= cos(x)^5, y= sin(y), col= z/x
+# x = tan(x), y= y, col= z
+# x = x, y= tan(y), col= z
+
+df2 %>% 
+  ggplot(
+    aes(x= x ^sin(z),
+        y = sin(y)/x,
+        col= z
+    )
+  ) +
+  # geom_point(show.legend = F)+
+  # geom_line(show.legend = F)+
+  geom_path(show.legend = F)+
+  
+  scale_color_paletteer_c("gameofthrones::martell")+
+  theme_void()+
+  theme(
+    panel.grid.major = element_line(colour = NA),
+    panel.grid.minor = element_line(colour = NA),
+    panel.background = element_rect(fill = "black"),
+    plot.background = element_rect(fill = "black")
+  )
 
 
