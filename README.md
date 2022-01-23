@@ -23,5 +23,11 @@ col= z
 ![fire](./img/fire-triangles.png)
 
 
+## star
+```
+geom_spoke( aes(angle= sin(x), radius= z), show.legend = F)+
+geom_spoke( aes(angle= (x)^z, radius= z*y), show.legend = F)+
+```
+![star](./img/star.png)
 
 
