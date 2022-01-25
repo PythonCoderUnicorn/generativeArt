@@ -171,13 +171,16 @@ df %>%
 df2 %>% 
   ggplot(
     aes(x= x ^sin(z),
-        y = sin(y)/x,
+        y = sin(y)^x,
         col= z
     )
   ) +
   # geom_point(show.legend = F)+
   # geom_line(show.legend = F)+
-  geom_path(show.legend = F)+
+  # geom_path(show.legend = F)+
+  # geom_rect( aes(xmin= 40, xmax= 80, ymin= 60, ymax= 90), fill= NA, show.legend = F)+
+  geom_spoke( aes(angle= sin(x), radius= z), show.legend = F)+
+  geom_spoke( aes(angle= (x)^z, radius= z*y), show.legend = F)+
   
   scale_color_paletteer_c("gameofthrones::martell")+
   theme_void()+
